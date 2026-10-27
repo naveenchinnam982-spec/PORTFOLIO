@@ -1,0 +1,20 @@
+{
+  "name": "naveen-chinnam-portfolio",
+  "version": "2.0.0",
+  "description": "Naveen Chinnam - Executive Developer Portfolio & AI Systems Engineer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "artificial-intelligence",
+    "full-stack",
+    "android",
+    "naveen-chinnam"
+  ],
+  "author": "Naveen Chinnam <naveenchinnam982@gmail.com>",
+  "license": "MIT"
+}

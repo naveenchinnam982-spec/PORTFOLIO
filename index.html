@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  
+  <!-- Primary Meta Tags -->
+  <title>Naveen Chinnam | Full Stack Developer & AI Developer</title>
+  <meta name="title" content="Naveen Chinnam | Full Stack Developer & AI Developer">
+  <meta name="description" content="Portfolio of Naveen Chinnam: 3rd-year B.Tech in Artificial Intelligence & Data Science at QIS College of Engineering and Technology. Full Stack, AI, Computer Vision, and Android Software Developer.">
+  <meta name="keywords" content="Naveen Chinnam, AI Developer, Full Stack Developer, Android Developer, Python, Java, React, Next.js, Computer Vision, QIS College">
+  <meta name="author" content="Naveen Chinnam">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://naveenchinnam.dev/">
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://naveenchinnam.dev/">
+  <meta property="og:title" content="Naveen Chinnam | Full Stack Developer & AI Developer">
+  <meta property="og:description" content="Explore real-world AI applications, scalable full-stack platforms, and native Android software built by Naveen Chinnam.">
+  <meta property="og:image" content="images/naveen-chinnam-1.jpg">
+
+  <!-- Twitter / X -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://naveenchinnam.dev/">
+  <meta property="twitter:title" content="Naveen Chinnam | Full Stack Developer & AI Developer">
+  <meta property="twitter:description" content="Explore real-world AI applications, scalable full-stack platforms, and native Android software built by Naveen Chinnam.">
+  <meta property="twitter:image" content="images/naveen-chinnam-1.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%236366f1'/><text x='50%' y='64%' font-size='50' font-weight='800' fill='white' text-anchor='middle' font-family='sans-serif'>NC</text></svg>">
+
+  <!-- Google Identity Services (GIS) Official SDK -->
+  <meta name="google-signin-client_id" content="YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Naveen Chinnam",
+    "jobTitle": "Full Stack Developer & AI Engineer",
+    "url": "https://naveenchinnam.dev/",
+    "sameAs": [
+      "https://github.com/naveenchinnam982-spec",
+      "https://www.linkedin.com/in/chinnam-naveen-6b6813425",
+      "https://www.instagram.com/Missyouyour6"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "QIS College of Engineering and Technology"
+    },
+    "knowsAbout": ["Artificial Intelligence", "Computer Vision", "Full Stack Web Development", "Android Development", "Python", "Java", "React", "Next.js"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ==============================================================
+       1. CINEMATIC BIRD INTRO EXPERIENCE (Section 1)
+       ============================================================== -->
+  <div id="intro-overlay" role="dialog" aria-modal="true" aria-label="Intro Animation">
+    <canvas id="intro-canvas"></canvas>
+    
+    <div id="intro-content">
+      <h1 class="intro-name">NAVEEN CHINNAM</h1>
+      <p class="intro-role">Full Stack &bull; AI Systems &bull; Android</p>
+    </div>
+
+    <button id="skip-intro-btn" class="intro-skip-btn" aria-label="Skip Introduction">
+      Skip Intro <span style="opacity: 0.6; font-size: 0.75rem;">[Esc]</span>
+    </button>
+  </div>
+
+  <!-- Ambient Starfield Canvas -->
+  <canvas id="bg-particles" aria-hidden="true"></canvas>
+
+  <!-- Custom Magnetic Cursor (Desktop) -->
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-circle" aria-hidden="true"></div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ==============================================================
+       NAVIGATION BAR (Section 13)
+       ============================================================== -->
+  <nav id="navbar" role="navigation" aria-label="Main Navigation">
+    <a href="#hero" class="nav-brand" aria-label="Naveen Chinnam Home">
+      <span>Naveen</span><span class="brand-dot">.</span>
+    </a>
+
+    <ul class="nav-menu">
+      <li><a href="#hero" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#journey" class="nav-link">Journey</a></li>
+      <li><a href="#resume" class="nav-link">Resume</a></li>
+      <li><a href="#connect" class="nav-link">Connect</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <!-- Optional Visitor Google Identification Widget -->
+      <div id="visitor-auth-widget" class="auth-widget-wrap"></div>
+
+      <button class="btn btn-outline btn-sm open-resume-btn" data-track-event="resume_click" data-track-label="Navbar Resume Button">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Resume
+      </button>
+
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+
+      <button id="mobile-toggle" class="mobile-menu-btn" aria-label="Open mobile navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" role="menu">
+    <a href="#hero" role="menuitem">Home</a>
+    <a href="#about" role="menuitem">About</a>
+    <a href="#skills" role="menuitem">Skills</a>
+    <a href="#projects" role="menuitem">Projects</a>
+    <a href="#journey" role="menuitem">Journey</a>
+    <a href="#resume" role="menuitem">Resume</a>
+    <a href="#connect" role="menuitem">Connect</a>
+    <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
+      <button class="btn btn-primary open-resume-btn" style="width: 100%;" data-track-event="resume_click" data-track-label="Mobile Drawer Resume">View Resume</button>
+      <button onclick="window.NC_Auth.openAuthModal()" class="btn btn-outline" style="width: 100%;">Connect with Google</button>
+    </div>
+  </div>
+
+  <!-- ==============================================================
+       MAIN CONTENT
+       ============================================================== -->
+  <main id="main-portfolio">
+
+    <!-- ============================================================
+         2. HERO SECTION (Section 2)
+         ============================================================ -->
+    <section id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Text -->
+          <div class="hero-content reveal visible">
+            <div class="hero-status-pill">
+              <span class="status-dot"></span>
+              <span>Available for AI & Full-Stack Opportunities</span>
+            </div>
+
+            <span class="hero-greeting">Hello, I’m</span>
+            <h1 class="hero-name"><span class="text-gradient">Naveen Chinnam</span></h1>
+
+            <div class="hero-role-wrapper">
+              I’m a <span id="hero-typewriter"></span><span class="typewriter-cursor"></span>
+            </div>
+
+            <p class="hero-bio">
+              3rd-year B.Tech in Artificial Intelligence & Data Science at QIS College of Engineering and Technology. 
+              Engineering intelligent systems with deep learning, building scalable full-stack web platforms, and architecting native Android software.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary" data-track-event="projects_click" data-track-label="Hero Projects CTA">
+                View My Projects
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </a>
+              <button class="btn btn-outline open-resume-btn" data-track-event="resume_click" data-track-label="Hero Resume CTA">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download Resume
+              </button>
+              <a href="#connect" class="btn btn-outline" data-track-event="connect_click" data-track-label="Hero Connect CTA">
+                Connect With Me
+              </a>
+            </div>
+
+            <!-- Hero Social Buttons Bar (Visit my GitHub, Connect with me, Follow me) -->
+            <div class="hero-social-bar">
+              <a href="https://github.com/naveenchinnam982-spec" target="_blank" rel="noopener noreferrer" class="hero-social-btn hero-social-github" data-track-event="github_click" data-track-label="Visit my GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>Visit my GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/chinnam-naveen-6b6813425" target="_blank" rel="noopener noreferrer" class="hero-social-btn hero-social-linkedin" data-track-event="linkedin_click" data-track-label="Connect with me">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span>Connect with me</span>
+              </a>
+              <a href="https://www.instagram.com/Missyouyour6" target="_blank" rel="noopener noreferrer" class="hero-social-btn hero-social-instagram" data-track-event="instagram_click" data-track-label="Follow me">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                <span>Follow me</span>
+              </a>
+            </div>
+
+            <div class="hero-metrics">
+              <div class="hero-metric-item">
+                <strong data-target="20" data-suffix="+">0</strong>
+                <span>Solutions Built</span>
+              </div>
+              <div class="hero-metric-item">
+                <strong data-target="8" data-suffix="+">0</strong>
+                <span>Core Languages</span>
+              </div>
+              <div class="hero-metric-item">
+                <strong data-target="5" data-suffix="+">0</strong>
+                <span>Deployed Apps</span>
+              </div>
+              <div class="hero-metric-item">
+                <strong data-target="100" data-suffix="%">0</strong>
+                <span>Commitment</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Profile Photo (Original Photo, Preserved, High Impact) -->
+          <div class="hero-photo-wrap reveal visible">
+            <div class="photo-ambient-glow"></div>
+            <div class="photo-card">
+              <img 
+                src="images/naveen-chinnam-1.jpg" 
+                alt="Naveen Chinnam - Full Stack & AI Developer" 
+                class="profile-img" 
+                width="720" 
+                height="900" 
+                loading="eager"
+              />
+            </div>
+            <div class="photo-floating-badge">
+              <div class="badge-icon">🎓</div>
+              <div>
+                <div class="badge-text-title">B.Tech AI & Data Science</div>
+                <div class="badge-text-sub">QIS College of Engineering & Tech</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="mouse-icon">
+          <div class="mouse-wheel"></div>
+        </div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3 & 4. PROJECTS SECTION (Sections 3 & 4 - Modern Interactive Showcase)
+         ============================================================ -->
+    <section id="projects">
+      <div class="container">
+        
+        <div class="projects-header-wrap reveal">
+          <div class="section-tag">
+            <span class="section-tag-dot"></span>
+            <span>Featured Engineering</span>
+          </div>
+          <h2 class="section-title">Real-World Projects & <span class="text-gradient">AI Innovations</span></h2>
+          <p class="section-subtitle">
+            An interactive showcase of production deployments, deep learning models, full-stack systems, and Android applications.
+          </p>
+
+          <!-- Category Filter Tabs -->
+          <div class="filter-tabs" role="tablist">
+            <button class="filter-btn active" data-filter="all" role="tab">All Projects</button>
+            <button class="filter-btn" data-filter="ai-ml" role="tab">AI & Computer Vision</button>
+            <button class="filter-btn" data-filter="full-stack" role="tab">Full Stack & Web</button>
+            <button class="filter-btn" data-filter="mobile" role="tab">Mobile & Android</button>
+            <button class="filter-btn" data-filter="web-apps" role="tab">Interactive Apps</button>
+          </div>
+        </div>
+
+        <!-- Asymmetric Interactive Showcase Grid (Rendered via JS) -->
+        <div id="projects-grid" class="projects-grid"></div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. ABOUT ME SECTION (Section 5)
+         ============================================================ -->
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          
+          <div class="about-image-card reveal">
+            <img 
+              src="images/naveen-chinnam-4.jpg" 
+              alt="Naveen Chinnam on Campus" 
+              width="720" 
+              height="720" 
+              loading="lazy" 
+            />
+            <div class="about-image-overlay">
+              <strong>Naveen Chinnam</strong> &bull; AI Researcher & Software Engineer
+            </div>
+          </div>
+
+          <div class="about-text-content reveal">
+            <div class="section-tag">
+              <span class="section-tag-dot"></span>
+              <span>About Me</span>
+            </div>
+            <h2 class="section-title">Curious Mind, <span class="text-gradient">Code-Driven Architecture.</span></h2>
+            
+            <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 1.05rem;">
+              I’m Naveen Chinnam, an engineering undergraduate specializing in <strong>Artificial Intelligence and Data Science</strong> at <strong>QIS College of Engineering and Technology</strong> (3rd Year).
+            </p>
+            <p style="color: var(--text-muted); margin-bottom: 24px; line-height: 1.7;">
+              I specialize in bridging advanced machine learning algorithms with high-throughput backend infrastructure, intuitive user interfaces, and mobile applications. Whether training computer vision models for drone monitoring or building server-side rendered web applications, I focus on clean code, performance, and practical real-world impact.
+            </p>
+
+            <!-- Developer Focus Pillars -->
+            <div class="about-pillars">
+              <div class="pillar-card">
+                <div class="pillar-icon">🧠</div>
+                <h3 class="pillar-title">AI & Data Science</h3>
+                <p class="pillar-desc">Computer vision, YOLOv8 object detection, retrieval-augmented generation (RAG), and predictive healthcare algorithms.</p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">⚡</div>
+                <h3 class="pillar-title">Full Stack Web</h3>
+                <p class="pillar-desc">Designing reactive web applications with Next.js, React, Node.js, RESTful APIs, and modern cloud deployment architectures.</p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-icon">📱</div>
+                <h3 class="pillar-title">Android Engineering</h3>
+                <p class="pillar-desc">Developing native Android applications with Kotlin, Java, Android Studio, Material 3, and Room SQLite databases.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+              <a href="#contact" class="btn btn-primary">Let’s Collaborate</a>
+              <button class="btn btn-outline open-resume-btn">View Complete Background</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. SKILLS SECTION (Section 6)
+         ============================================================ -->
+    <section id="skills">
+      <div class="container">
+        
+        <div style="text-align: center; max-width: 650px; margin: 0 auto 40px;" class="reveal">
+          <div class="section-tag">
+            <span class="section-tag-dot"></span>
+            <span>Technical Capabilities</span>
+          </div>
+          <h2 class="section-title">Core Languages & <span class="text-gradient">Technologies</span></h2>
+          <p class="section-subtitle">
+            A comprehensive, verified technical toolkit utilized across real projects, academic research, and production codebases.
+          </p>
+        </div>
+
+        <!-- Skill Category Navigation -->
+        <div class="skill-tabs-nav reveal">
+          <button class="skill-tab-btn active" data-skill-category="all">All Skills</button>
+          <button class="skill-tab-btn" data-skill-category="programming">Programming</button>
+          <button class="skill-tab-btn" data-skill-category="ai">AI / ML</button>
+          <button class="skill-tab-btn" data-skill-category="frontend">Frontend</button>
+          <button class="skill-tab-btn" data-skill-category="backend">Backend & DB</button>
+          <button class="skill-tab-btn" data-skill-category="mobile">Mobile</button>
+          <button class="skill-tab-btn" data-skill-category="tools">Tools</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid reveal">
+          
+          <div class="skill-card" data-category="programming">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge">Py</div>
+              <div class="skill-card-info">
+                <h3>Python</h3>
+                <span class="skill-category-tag">Programming & AI</span>
+              </div>
+            </div>
+            <p>Data science, PyTorch, computer vision scripts, automation pipelines, and FastAPI web servers.</p>
+          </div>
+
+          <div class="skill-card" data-category="programming">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge">C</div>
+              <div class="skill-card-info">
+                <h3>C</h3>
+                <span class="skill-category-tag">Systems & Algorithms</span>
+              </div>
+            </div>
+            <p>Memory allocation, pointer arithmetic, data structures, and foundational compute logic.</p>
+          </div>
+
+          <div class="skill-card" data-category="programming">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge">Jv</div>
+              <div class="skill-card-info">
+                <h3>Java</h3>
+                <span class="skill-category-tag">Object-Oriented</span>
+              </div>
+            </div>
+            <p>Object-oriented software design, native Android runtime, and multithreaded systems.</p>
+          </div>
+
+          <div class="skill-card" data-category="mobile">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge">Kt</div>
+              <div class="skill-card-info">
+                <h3>Kotlin</h3>
+                <span class="skill-category-tag">Mobile Native</span>
+              </div>
+            </div>
+            <p>Modern Android app development, coroutines, ViewModel, and clean architecture.</p>
+          </div>
+
+          <div class="skill-card" data-category="ai">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge">AI</div>
+              <div class="skill-card-info">
+                <h3>Machine Learning</h3>
+                <span class="skill-category-tag">AI & Research</span>
+              </div>
+            </div>
+            <p>Supervised learning, neural networks, predictive healthcare modeling, and RAG evaluation.</p>
+          </div>
+
+          <div class="skill-card" data-category="ai">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge">CV</div>
+              <div class="skill-card-info">
+                <h3>Computer Vision</h3>
+                <span class="skill-category-tag">YOLO & OpenCV</span>
+              </div>
+            </div>
+            <p>Real-time drone object detection, thermal camera processing, and video analytics.</p>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge">&lt;/&gt;</div>
+              <div class="skill-card-info">
+                <h3>HTML5 & CSS3</h3>
+                <span class="skill-category-tag">Web Standards</span>
+              </div>
+            </div>
+            <p>Semantic page architecture, accessible DOM hierarchy, fluid responsive grids, and CSS animations.</p>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge">JS</div>
+              <div class="skill-card-info">
+                <h3>JavaScript (ES6+)</h3>
+                <span class="skill-category-tag">Web Core</span>
+              </div>
+            </div>
+            <p>Asynchronous APIs, canvas game loops, event-driven interfaces, and DOM manipulation.</p>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge">TS</div>
+              <div class="skill-card-info">
+                <h3>TypeScript</h3>
+                <span class="skill-category-tag">Type Safety</span>
+              </div>
+            </div>
+            <p>Strict types, robust interfaces, and scalable full-stack application development.</p>
+          </div>
+
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge">Rct</div>
+              <div class="skill-card-info">
+                <h3>React & Next.js</h3>
+                <span class="skill-category-tag">Frontend & SSR</span>
+              </div>
+            </div>
+            <p>Component-driven state, SSR routing, hooks, Tailwind CSS styling, and Vercel edge deployment.</p>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge">Nd</div>
+              <div class="skill-card-info">
+                <h3>Node.js & APIs</h3>
+                <span class="skill-category-tag">Backend</span>
+              </div>
+            </div>
+            <p>REST endpoints, serverless functions, microservices, and asynchronous event processing.</p>
+          </div>
+
+          <div class="skill-card" data-category="tools">
+            <div class="skill-card-top">
+              <div class="skill-icon-badge">Git</div>
+              <div class="skill-card-info">
+                <h3>Git & GitHub</h3>
+                <span class="skill-category-tag">DevOps & CI/CD</span>
+              </div>
+            </div>
+            <p>Branch management, open source collaboration, Netlify CI/CD, and Vercel workflows.</p>
+          </div>
+
+        </div>
+
+        <!-- Infinite Ticker Marquee -->
+        <div class="skills-marquee-wrap reveal">
+          <div class="skills-marquee-track">
+            <span class="marquee-item">Python</span>
+            <span class="marquee-item">PyTorch</span>
+            <span class="marquee-item">Computer Vision</span>
+            <span class="marquee-item">YOLOv8</span>
+            <span class="marquee-item">Java</span>
+            <span class="marquee-item">Kotlin</span>
+            <span class="marquee-item">Android Studio</span>
+            <span class="marquee-item">React</span>
+            <span class="marquee-item">Next.js</span>
+            <span class="marquee-item">TypeScript</span>
+            <span class="marquee-item">JavaScript</span>
+            <span class="marquee-item">HTML5 & CSS3</span>
+            <span class="marquee-item">FastAPI</span>
+            <span class="marquee-item">Git & GitHub</span>
+            <span class="marquee-item">Netlify</span>
+            <span class="marquee-item">Vercel</span>
+            <!-- Repeat for seamless loop -->
+            <span class="marquee-item">Python</span>
+            <span class="marquee-item">PyTorch</span>
+            <span class="marquee-item">Computer Vision</span>
+            <span class="marquee-item">YOLOv8</span>
+            <span class="marquee-item">Java</span>
+            <span class="marquee-item">Kotlin</span>
+            <span class="marquee-item">Android Studio</span>
+            <span class="marquee-item">React</span>
+            <span class="marquee-item">Next.js</span>
+            <span class="marquee-item">TypeScript</span>
+            <span class="marquee-item">JavaScript</span>
+            <span class="marquee-item">HTML5 & CSS3</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         7. JOURNEY & TIMELINE (Section 7)
+         ============================================================ -->
+    <section id="journey">
+      <div class="container">
+        
+        <div style="text-align: center; max-width: 650px; margin: 0 auto 30px;" class="reveal">
+          <div class="section-tag">
+            <span class="section-tag-dot"></span>
+            <span>Education & Milestones</span>
+          </div>
+          <h2 class="section-title">My Academic & <span class="text-gradient">Developer Journey</span></h2>
+          <p class="section-subtitle">
+            Key academic progression, software milestones, and engineering achievements.
+          </p>
+        </div>
+
+        <div class="timeline reveal">
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-date">2023 – 2027 (Ongoing)</span>
+                <span class="timeline-badge">Undergraduate Degree</span>
+              </div>
+              <h3 class="timeline-title">B.Tech in Artificial Intelligence & Data Science</h3>
+              <div class="timeline-org">QIS College of Engineering and Technology (3rd Year)</div>
+              <p class="timeline-desc">
+                Specializing in AI algorithms, machine learning systems, statistical modeling, data structures, database management, and distributed software engineering.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-date">2024 – 2025</span>
+                <span class="timeline-badge">Mobile & Full-Stack Expansion</span>
+              </div>
+              <h3 class="timeline-title">Android Architecture & Streaming Web Platforms</h3>
+              <div class="timeline-org">Independent Engineering & Open Source</div>
+              <p class="timeline-desc">
+                Built and released the SDC-MODULES Android ecosystem using Kotlin and Java. Engineered the Next.js Netflix streaming web application deployed on Vercel with real-time Firebase synchronization.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-date">2025 – 2026</span>
+                <span class="timeline-badge">Applied AI Research & Deployments</span>
+              </div>
+              <h3 class="timeline-title">WildlifeVision-AI & HealthContinuum-AI Systems</h3>
+              <div class="timeline-org">Production AI Applications</div>
+              <p class="timeline-desc">
+                Architected WildlifeVision-AI for autonomous drone aerial animal detection using YOLOv8. Developed HealthContinuum-AI and LLM-RAG-Comparison for multi-model benchmark evaluation.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- ============================================================
+         9. RESUME SECTION (Section 9)
+         ============================================================ -->
+    <section id="resume">
+      <div class="container">
+        
+        <div class="resume-cta-box reveal">
+          <div class="section-tag">
+            <span class="section-tag-dot"></span>
+            <span>Curriculum Vitae</span>
+          </div>
+          <h2>Ready to Inspect My Full Qualifications?</h2>
+          <p>
+            Review my verified academic background, technical competencies, project architectures, and contact credentials in a single comprehensive format.
+          </p>
+
+          <div class="resume-btn-group">
+            <button class="btn btn-primary open-resume-btn" data-track-event="resume_click" data-track-label="Resume Section Interactive View">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+              View Interactive Resume
+            </button>
+            <button class="btn btn-outline open-resume-btn" data-track-event="resume_click" data-track-label="Resume Section Download PDF">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download PDF Version
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONNECT WITH ME SECTION
+         ============================================================ -->
+    <section id="connect" class="connect-section">
+      <div class="container">
+        
+        <div class="connect-header reveal">
+          <div class="section-tag">
+            <span class="section-tag-dot"></span>
+            <span>Let’s Connect</span>
+          </div>
+          <h2 class="section-title">Connect <span class="text-gradient">With Me</span></h2>
+          <p class="section-subtitle">
+            Explore my code repositories, connect professionally, or follow my latest tech updates across my official profiles.
+          </p>
+        </div>
+
+        <div class="connect-cards-grid reveal">
+          
+          <!-- GitHub Card -->
+          <a href="https://github.com/naveenchinnam982-spec" target="_blank" rel="noopener noreferrer" class="connect-card connect-card-github" data-track-event="github_click" data-track-label="Explore my repositories">
+            <div class="connect-card-top">
+              <div class="connect-card-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <span class="connect-external-badge" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </span>
+            </div>
+            <div class="connect-card-info">
+              <h3 class="connect-platform-name">GitHub</h3>
+              <p class="connect-platform-desc">Explore my repositories</p>
+            </div>
+            <div class="connect-card-action">
+              <span>View my GitHub profile</span>
+              <span class="connect-arrow">&rarr;</span>
+            </div>
+          </a>
+
+          <!-- LinkedIn Card -->
+          <a href="https://www.linkedin.com/in/chinnam-naveen-6b6813425" target="_blank" rel="noopener noreferrer" class="connect-card connect-card-linkedin" data-track-event="linkedin_click" data-track-label="Connect with me professionally">
+            <div class="connect-card-top">
+              <div class="connect-card-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </div>
+              <span class="connect-external-badge" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </span>
+            </div>
+            <div class="connect-card-info">
+              <h3 class="connect-platform-name">LinkedIn</h3>
+              <p class="connect-platform-desc">Connect with me professionally</p>
+            </div>
+            <div class="connect-card-action">
+              <span>Connect on LinkedIn</span>
+              <span class="connect-arrow">&rarr;</span>
+            </div>
+          </a>
+
+          <!-- Instagram Card -->
+          <a href="https://www.instagram.com/Missyouyour6" target="_blank" rel="noopener noreferrer" class="connect-card connect-card-instagram" data-track-event="instagram_click" data-track-label="Follow my updates">
+            <div class="connect-card-top">
+              <div class="connect-card-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </div>
+              <span class="connect-external-badge" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </span>
+            </div>
+            <div class="connect-card-info">
+              <h3 class="connect-platform-name">Instagram</h3>
+              <p class="connect-platform-desc">Follow my updates</p>
+            </div>
+            <div class="connect-card-action">
+              <span>Follow on Instagram</span>
+              <span class="connect-arrow">&rarr;</span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================================================
+       FOOTER & QUICK CALL (Section 27)
+       ============================================================== -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span>Naveen Chinnam</span><span style="color: var(--secondary)">.</span>
+      </div>
+
+      <div class="footer-copy">
+        &copy; 2026 Naveen Chinnam. Engineered with precision &amp; passion.
+      </div>
+
+      <div style="display: flex; gap: 16px; align-items: center;">
+        <button onclick="window.replayIntro()" class="footer-admin-link" title="Watch bird flight intro again">
+          🕊️ Replay Intro
+        </button>
+        <span style="color: var(--border-subtle);">&bull;</span>
+        <button id="admin-trigger-btn" class="footer-admin-link" title="Private visitor metrics">
+          🔒 Admin Analytics
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Call Button -->
+  <a href="tel:+917780506327" class="floating-call-btn" aria-label="Call Naveen Chinnam directly">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  </a>
+
+  <!-- ==============================================================
+       MODALS (Project Detail, Resume, Admin Analytics)
+       ============================================================== -->
+  
+  <!-- 1. Project Detail Modal -->
+  <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Project Details">
+    <div class="modal-card">
+      <button id="project-modal-close" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div id="project-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- 2. Resume Modal (Section 9) -->
+  <div id="resume-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Resume View">
+    <div class="modal-card" style="max-width: 820px;">
+      <button id="resume-modal-close" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      
+      <div style="padding: 24px 32px 0; display: flex; justify-content: flex-end; gap: 12px;">
+        <button id="print-resume-btn" class="btn btn-primary btn-sm">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Print / Save PDF
+        </button>
+      </div>
+
+      <div style="padding: 24px 32px 36px;">
+        <div class="resume-paper">
+          
+          <div class="resume-header">
+            <h1>NAVEEN CHINNAM</h1>
+            <div class="resume-header-meta">
+              <span>📍 Ongole, Andhra Pradesh, India</span>
+              <span>📞 +91 77805 06327</span>
+              <span>✉️ naveenchinnam982@gmail.com</span>
+              <span>🔗 github.com/naveenchinnam982-spec</span>
+            </div>
+          </div>
+
+          <div class="resume-section">
+            <h2>Professional Summary</h2>
+            <p>
+              Dedicated 3rd-year B.Tech undergraduate in Artificial Intelligence and Data Science at QIS College of Engineering and Technology. Proven track record of architecting deep learning computer vision pipelines, full-stack web applications with Next.js & React, and native Android applications. Experienced in developing real-world software deployed on Vercel and Netlify.
+            </p>
+          </div>
+
+          <div class="resume-section">
+            <h2>Education</h2>
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <span>B.Tech in Artificial Intelligence &amp; Data Science</span>
+                <span>2023 – 2027</span>
+              </div>
+              <div class="resume-item-sub">QIS College of Engineering and Technology, Ongole</div>
+              <p style="font-size: 0.88rem; color: #475569;">
+                Key Coursework: Deep Learning, Computer Vision, Data Structures & Algorithms, Object-Oriented Programming (Java/C), Database Management Systems, Operating Systems.
+              </p>
+            </div>
+          </div>
+
+          <div class="resume-section">
+            <h2>Technical Skills</h2>
+            <p style="font-size: 0.9rem; line-height: 1.7;">
+              <strong>Programming Languages:</strong> Python, C, Java, Kotlin, JavaScript (ES6+), TypeScript, SQL.<br>
+              <strong>AI &amp; Data Science:</strong> PyTorch, OpenCV, YOLOv8, Computer Vision, RAG Systems, Vector Search, Machine Learning.<br>
+              <strong>Web &amp; Cloud:</strong> Next.js, React, Node.js, HTML5, CSS3, Tailwind CSS, Firebase, RESTful APIs, Netlify, Vercel.<br>
+              <strong>Mobile &amp; Tools:</strong> Android Studio, Git, GitHub, Linux, Docker, VS Code.
+            </p>
+          </div>
+
+          <div class="resume-section">
+            <h2>Key Projects</h2>
+            
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <span>WildlifeVision-AI &mdash; Drone Wildlife Monitoring</span>
+                <span>2025 – 2026</span>
+              </div>
+              <div class="resume-item-sub">PyTorch, OpenCV, YOLOv8, TypeScript, Drone Telemetry</div>
+              <p style="font-size: 0.88rem; color: #475569;">
+                Constructed an autonomous aerial animal detection and anti-poaching surveillance system with real-time bounding box tracking, thermal video analysis, and telemetry telemetry overlays.
+              </p>
+            </div>
+
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <span>HealthContinuum-AI &mdash; Predictive Healthcare Platform</span>
+                <span>2025</span>
+              </div>
+              <div class="resume-item-sub">Python, FastAPI, React, Vercel Deployment</div>
+              <p style="font-size: 0.88rem; color: #475569;">
+                Engineered a predictive biometric patient analytics platform with automated ECG waveform annotation, early arrhythmia risk classification, and clinical dashboards deployed live on Vercel.
+              </p>
+            </div>
+
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <span>Netflix Streaming Platform &mdash; Modern Web Application</span>
+                <span>2024</span>
+              </div>
+              <div class="resume-item-sub">Next.js, React, TypeScript, Tailwind CSS, Firebase, Cloudinary</div>
+              <p style="font-size: 0.88rem; color: #475569;">
+                Developed a responsive media streaming web app with SSR catalog pages, interactive video player previews, and cloud-synced user watchlists.
+              </p>
+            </div>
+
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <span>SDC-MODULES &mdash; Native Android Suite</span>
+                <span>2024</span>
+              </div>
+              <div class="resume-item-sub">Android Studio, Kotlin, Java, Material 3, SQLite</div>
+              <p style="font-size: 0.88rem; color: #475569;">
+                Created modular native Android applications implementing clean MVVM architecture, background workers, and persistent local storage.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Private Admin Analytics Dashboard Modal (Section 12) -->
+  <div id="admin-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Admin Analytics">
+    <div class="modal-card" style="max-width: 900px;">
+      <button id="admin-modal-close" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      
+      <div class="admin-card-inner">
+        
+        <!-- Auth View -->
+        <div id="admin-auth-view" class="admin-auth-box">
+          <div style="font-size: 2.4rem; margin-bottom: 12px;">🔒</div>
+          <h2 style="font-family: var(--font-display); font-size: 1.6rem; margin-bottom: 8px;">Private Visitor Analytics</h2>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 24px;">
+            Enter your admin PIN to access private visitor metrics and live session logs.
+          </p>
+
+          <input type="password" id="admin-pin-input" class="form-control" placeholder="••••" maxlength="6" />
+          <button id="admin-pin-submit" class="btn btn-primary" style="width: 100%;">Authenticate</button>
+          <div id="admin-pin-error" style="color: #ef4444; font-size: 0.84rem; margin-top: 12px;"></div>
+          <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 16px;">
+            Default PIN: <code>9820</code> (Configurable via <code>ADMIN_PIN</code> environment variable)
+          </p>
+        </div>
+
+        <!-- Authenticated Analytics Dashboard View -->
+        <div id="admin-data-view" style="display: none;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 14px;">
+            <div>
+              <h2 style="font-family: var(--font-display); font-size: 1.6rem;">Visitor Telemetry &amp; Social Activity</h2>
+              <p style="color: var(--text-muted); font-size: 0.84rem;">Real-time sessions &amp; social interactions monitored and alerted to <code>naveenchinnam982@gmail.com</code></p>
+            </div>
+            <button id="clear-logs-btn" class="btn btn-outline btn-sm">Refresh Dashboard</button>
+          </div>
+
+          <!-- Top Metric Cards -->
+          <div class="admin-grid-metrics">
+            <div class="adm-metric-card">
+              <span class="adm-metric-num" id="adm-identified-visitors" style="color: #38bdf8;">0</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">Identified Google Visitors</span>
+            </div>
+            <div class="adm-metric-card">
+              <span class="adm-metric-num" id="adm-anon-visitors">0</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">Anonymous Interactions</span>
+            </div>
+            <div class="adm-metric-card">
+              <span class="adm-metric-num" style="color: #10b981;">Active</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">Real-Time Email Alerts</span>
+            </div>
+          </div>
+
+          <!-- Interaction Clicks Breakdown -->
+          <h3 style="font-size: 1rem; margin-bottom: 12px; color: var(--text-secondary);">Social &amp; Portfolio Clicks Breakdown</h3>
+          <div id="adm-clicks-breakdown" class="adm-devices-box"></div>
+
+          <!-- Live Recent Activity Feed -->
+          <h3 style="font-size: 1rem; margin: 28px 0 12px; color: var(--text-secondary);">Live Activity Feed (Real-Time Clicks)</h3>
+          <div class="adm-table-wrap">
+            <table class="adm-table">
+              <thead>
+                <tr>
+                  <th>Visitor Identity</th>
+                  <th>Action</th>
+                  <th>Time</th>
+                  <th>Device / Browser</th>
+                  <th>Location</th>
+                </tr>
+              </thead>
+              <tbody id="adm-activity-table-body"></tbody>
+            </table>
+          </div>
+
+          <!-- Identified Visitors Roster -->
+          <h3 style="font-size: 1rem; margin: 28px 0 12px; color: var(--text-secondary);">Identified Google Visitors Roster</h3>
+          <div class="adm-table-wrap">
+            <table class="adm-table">
+              <thead>
+                <tr>
+                  <th>Display Name</th>
+                  <th>Google Email</th>
+                  <th>First Connected</th>
+                  <th>Activity Count</th>
+                </tr>
+              </thead>
+              <tbody id="adm-roster-table-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ==============================================================
+       4. GOOGLE IDENTITY / CONNECT MODAL
+       ============================================================== -->
+  <div id="auth-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Connect with Google">
+    <div class="modal-card" style="max-width: 520px;">
+      <button id="auth-modal-close" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div style="padding: 38px 30px; text-align: center;">
+        <div style="width: 56px; height: 56px; border-radius: 16px; background: rgba(99, 102, 241, 0.12); border: 1px solid rgba(99, 102, 241, 0.3); display: grid; place-items: center; margin: 0 auto 16px; font-size: 1.6rem;">
+          🤝
+        </div>
+        <h2 style="font-family: var(--font-display); font-size: 1.65rem; font-weight: 800; margin-bottom: 8px;">Connect with Naveen</h2>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px;">
+          Optional: Sign in with Google if you'd like to stay connected while exploring my portfolio. Your email is used only to associate your portfolio interactions and will not be publicly displayed.
+        </p>
+
+        <!-- Official Google Identity Services Button Container -->
+        <div id="google-btn-container" style="display: flex; justify-content: center; margin-bottom: 20px;"></div>
+
+        <!-- Developer / Local Test Login Option -->
+        <div style="border-top: 1px solid var(--border-subtle); padding-top: 20px; margin-top: 20px; text-align: left;">
+          <span style="font-size: 0.76rem; color: var(--text-muted); text-transform: uppercase; font-family: var(--font-mono); display: block; margin-bottom: 10px;">
+            🧪 Test / Simulation Sign-In (Local &amp; Review Mode)
+          </span>
+          <div style="display: flex; gap: 8px;">
+            <input type="email" id="dev-test-email" class="form-control" placeholder="visitor@gmail.com" style="padding: 10px 14px; font-size: 0.88rem;" />
+            <button onclick="window.submitDevAuth()" class="btn btn-primary btn-sm" style="white-space: nowrap;">Connect</button>
+          </div>
+        </div>
+
+        <div id="auth-modal-status" style="margin-top: 14px; font-size: 0.84rem; display: none;"></div>
+
+        <div style="margin-top: 24px; padding: 12px; background: rgba(255, 255, 255, 0.03); border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); font-size: 0.76rem; color: var(--text-muted); text-align: left;">
+          🔒 <strong>Privacy Guarantee:</strong> No passwords, cookies, or browser history are ever accessed. You can disconnect or delete your recorded activity anytime with one click.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="portfolio-toast" class="portfolio-toast" role="status" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/projects-data.js"></script>
+  <script src="js/tracker.js"></script>
+  <script src="js/bird-intro.js"></script>
+  <script src="js/auth-identity.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
